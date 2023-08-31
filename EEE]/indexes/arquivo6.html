@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+	</head>
+	<body>
+		<script>
+			function Pessoa(nome, idade) {
+				this.nome = nome;
+				this.idade = idade;
+			}
+
+			Pessoa.prototype.saudacao = function() {
+				console.log(`Olá, meu nome é ${this.nome}`);
+			};
+
+			const pessoa1 = new Pessoa('Mariana', 25);
+			pessoa1.saudacao();
+			
+		</script>
+	</body>	
+</html>

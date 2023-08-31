@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+	</head>
+	<body>
+		<script>
+			const pessoa = {
+				nome: "José",
+				idade: 30,
+				saudacao() {
+					console.log(`Olá, meu nome é ${this.nome}`);
+				}
+			};
+
+			const aluno = Object.create(pessoa);
+			aluno.matricula = "12345";
+
+			aluno.saudacao();
+			console.log(aluno.matricula);
+		</script>
+	</body>	
+</html>

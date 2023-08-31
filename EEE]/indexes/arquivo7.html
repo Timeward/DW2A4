@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+	</head>
+	<body>
+		<script>
+			// Definição do protótipo
+			function Forma() {
+				this.cor = 'indefinida';
+			}
+
+			// Adição de método ao protótipo
+			Forma.prototype.setCor = function(cor) {
+				this.cor = cor;
+			};
+
+			// Criação de círculo - Forma
+			function Circulo(raio) {
+				this.raio = raio;
+			}
+
+			Circulo.prototype = Object.create(Forma.prototype); // Herda de Forma
+			Circulo.prototype.constructor = Circulo; // Corrige a referência ao construtor
+
+			// Adicionando um método específico para Circulo
+			Circulo.prototype.calcularArea = function() {
+				return Math.PI * this.raio * this.raio;
+			};
+
+			// Criando um retângulo que herda de Forma
+			function Retangulo(largura, altura) {
+				this.largura = largura;
+				this.altura = altura;
+			}
+
+			Retangulo.prototype = Object.create(Forma.prototype); // Herda de Forma
+			Retangulo.prototype.constructor = Retangulo; // Corrige a referência ao construtor
+
+			// Adicionando um método específico para Retangulo
+			Retangulo.prototype.calcularArea = function() {
+				return this.largura * this.altura;
+			};
+
+			// Criando instâncias das formas
+			const circulo = new Circulo(5);
+			const retangulo = new Retangulo(4, 6);
+
+			// Usando os métodos herdados e específicos
+			circulo.setCor('vermelho');
+			console.log(`Área do círculo: ${circulo.calcularArea()}`);
+			console.log(`Cor do círculo: ${circulo.cor}`);
+
+			retangulo.setCor('azul');
+			console.log(`Área do retângulo: ${retangulo.calcularArea()}`);
+			console.log(`Cor do retângulo: ${retangulo.cor}`);
+		</script>
+	</body>	
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+	</head>
+	<body>
+		<script>
+			class Pessoa {
+				constructor(nome, idade, profissao){
+					this.nome = nome;
+					this.idade = idade;
+					this.profissao = profissao;
+				}
+				falar(){
+					console.log("Blá, blá, blá...");
+				}
+			}
+			
+			p1 = new Pessoa("José da Silva", 38, "Analista de Sistemas");
+			console.log(p1.nome);
+			console.log(p1.idade);
+			console.log(p1.profissao);
+			p1.falar();
+		</script>
+	</body>	
+</html>
