@@ -1,0 +1,175 @@
+:root{
+    --custom_black: #171717;
+    --custom_white: #e9e1d3;
+    --custom_dark_red: #6b1415;
+    --custom_red: #9b1e1e;
+    --custom_green: #197b30;
+    --custom_lightgreen: #25b346;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--custom_black);
+    color: var(--custom_white);
+}
+
+header{
+    background-color: var(--custom_dark_red);
+    padding: 2rem 0 4rem;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#dropform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    background-color: var(--custom_black);
+    font-size: large;
+    font-weight: bold;
+}
+
+#dropdown{
+    border: none;
+    border-radius: .5rem;
+    margin: .35rem;
+    padding: .75rem;
+    background-color: var(--custom_red);
+    color: var(--custom_white);
+    font-size: medium;
+}
+
+label{
+    margin: .6rem;
+    margin-left: 0rem;
+}
+
+.showDiv{
+    display: flex !important;
+}
+
+#resizeDiv{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1rem;
+}
+
+#hexDiv{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#ovalDiv{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+div h3{
+    margin-left: .6rem;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+}
+
+input{
+    display: flex;
+    padding: .65rem;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: var(--custom_white);
+}
+
+output{
+    display: flex;
+    padding: .65rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    flex-direction: column;
+    background-color: var(--custom_dark_red);
+    color: white;
+    width: 220px;
+    border-radius: .5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer h3{
+    opacity: .75;
+}
+
+footer h4{
+    opacity: .45;
+}
+
+@media (max-width: 1020px){
+
+    #resizeDiv{
+        position: relative;
+        flex-direction: column;
+    }
+
+    #hexDiv{
+        position: relative;
+        flex-direction: column;
+    }
+
+    #ovalDiv{
+        position: relative;
+        flex-direction: column;
+    }
+    
+    label{
+        margin: 0;
+    }
+
+    input{
+        margin: 0;
+    }
+
+    #inputA, #inputB, #inputC{
+        margin-top: 0rem;
+    }
+    
+    #inputB{
+        margin-bottom: 1rem;
+    }
+
+    label[for="inputB"], label[for="inputC"], #equalSignResize{
+        margin-top: 0rem;
+    }
+    
+    #outputD{
+        margin-top: 0rem;
+        width: 220px;
+    }
+
+    label[for="outputD"]{
+        margin-top: 0rem;
+    }
+}

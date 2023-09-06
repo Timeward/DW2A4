@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number Cruncher</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="./components/showDivScript.js"></script>
+        <script src="./components/reset.js"></script>
+    </head>
+
+
+<body>
+    <header>
+        <h1 id="logo">Number Cruncher</h1>
+    </header>
+
+    <main>
+        <form id="dropform" action="#">
+            <label for="formula">Fórmula</label>
+            <select id="dropdown" name="formulas" onchange="show(this.value)">
+                <option value="default">Selecione uma Fórmula</option>
+                <option value="resize">Multiplicação Cruzada</option>
+                <option value="hex">Área de Hexagono</option>
+                <option value="oval">Área de Elipsóide</option>
+            </select>
+        </form>
+
+
+        <div id="resizeDiv">
+
+            <label for="inputA"><h3>A:</h3></label>
+            <input type="number" id="inputA" name="inputA" required>
+        
+            <label for="inputB"><h3>B:</h3></label>
+            <input type="number" id="inputB" name="inputB" required>
+            
+            <h3 id="equalSignResize">=</h3>
+
+            <label for="inputC"><h3>C:</h3></label>
+            <input type="number" id="inputC" name="inputC" required>
+        
+            <label for="outputD"><h3>D:</h3></label>
+            <output id="outputD" name="outputD">
+        
+        </div>
+
+        <div id="hexDiv">
+
+            <label for="sideLength"><h3>Comprimento da Aresta:</h3></label>
+            <input type="number" id="sideLength" name="sideLength" required>
+
+            <h3>=</h3>
+
+            <label for="result"><h3>Área:</h3></label>
+            <output id="hexResult" value="0"></output>
+
+
+        </div>
+
+        <div id="ovalDiv">
+
+            <h3>π</h3>
+
+            <h3>x</h3>
+
+            <label for="radiusA"><h3>r(a):</h3></label>
+            <input type="number" id="radiusA" name="radiusA" required>
+
+            <h3>x</h3>
+
+            <label for="radiusB"><h3>r(b):</h3></label>
+            <input type="number" id="radiusB" name="radiusB" required>
+
+            <h3>=</h3>
+
+            <label for="ovalResult"><h3>Área:</h3></label>
+            <output id="ovalResult" value="0"></output>
+
+        </div>
+    </main>
+    <footer>
+        <h3>Number Cruncher by Timeward<br></h3>
+        <h4>Licensed under GNU GPL 3.0</h4>
+    </footer>
+</body>
+</html>
