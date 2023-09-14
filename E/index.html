@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+    <body>
+        <script>
+            class Tv{
+                constructor(){
+                    // O sinal _ é uma convenção
+                    // Não impede o acesso
+                    this._relacaoCanais = Array(2,4,5,7,10,909);
+                    this._canalAtivo = 5;
+                    this._volume = 3;
+                }
+                get canalAtivo(){
+                    return this._canalAtivo;
+                }
+                
+                get volume(){
+                    return this._volume;
+                }
+                
+                // Para resolver o problema de atribuição, define-se um método 
+                // com o mesmo nome do atributo
+                set canalAtivo(canal){
+                    if(this._relacaoCanais.indexOf(canal) !== -1){
+                        this._canalAtivo = canal;
+                    }
+                }
+            }
+        
+            let minhaTv = new Tv();
+        
+            minhaTv.canalAtivo = 909;
+            console.log("Canal: " + minhaTv.canalAtivo);
+        </script>
+    </body>
+</html>

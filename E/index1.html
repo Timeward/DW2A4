@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="script.js"></script>
+    </head>
+        <body>
+            <script>
+                class Pessoa{
+                    constructor(){
+                        this._relacaoSexo = Array("M","F")
+                        this._idade = 35;
+                        this._sexo = "M";
+                    }
+                    get idade(){
+                        return this._idade;
+                    }
+
+                    get sexo(){
+                        return this._sexo;
+                    }
+
+                    // Para resolver o problema de atribuição, define-se um método 
+                    // com o mesmo nome do atributo
+                    set sexo(sexoAtual){
+                        if(this._relacaoSexo.indexOf(sexoAtual) !== -1){
+                            this._sexo = sexoAtual;
+                        }else{
+                            this._sexo = "Inválido"
+                        }
+                    }
+                    set idade(idadeAtual){
+                        if(typeof idadeAtual === 'number'){
+                            this._idade = idadeAtual;
+                        }
+                    }
+                }
+            
+                let pessoaNova = new Pessoa();
+            
+                pessoaNova.sexo = "F";
+                pessoaNova.idade = 24;
+
+                console.log("Idade: " + pessoaNova.idade);
+                console.log("Sexo: " + pessoaNova.sexo);
+            </script>
+        </body>
+</html>
